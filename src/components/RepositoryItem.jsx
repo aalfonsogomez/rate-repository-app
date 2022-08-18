@@ -16,12 +16,7 @@ const styles = StyleSheet.create({
         padding: 20,
         paddingBottom: 5,
         paddingTop: 5
-    },
-    prueba: {
-        flexDirection: 'row',
-        justifyContent: 'space-around'
     }
-
 })
 
 export default RepositoryItem;
