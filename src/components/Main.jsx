@@ -1,6 +1,7 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import RepositoryList from './RepositoryList';
 import AppBar from './AppBar';
+import LogInPage from '../pages/Login.jsx';
 import { Routes, Route } from 'react-router-native';
 
 const Main = () => {
@@ -9,7 +10,7 @@ const Main = () => {
             <AppBar />
             <Routes>
                 <Route path='/' exact element={<RepositoryList />} />
-                <Route path='/sigin' exact element={<Text>Working on it</Text>} />
+                <Route path='/sigin' exact element={<LogInPage>Working on it</LogInPage>} />
             </Routes>
         </View>
     );
