@@ -1,8 +1,8 @@
 
+import StyledTextInput from '../components/StyledTextInput';
+import StyledText from '../components/StyledText';
 import { Formik, useField } from 'formik';
 import { View, Button, StyleSheet } from 'react-native';
-import { StyledTextInput } from '../components/StyledTextInput';
-import { StyledText } from '../components/StyledText';
 
 const initialValues = {
     email: '',
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 });
 
 const FormikInputValue = ({ name, ...props }) => {
-    const [ field, meta, helpers ] = useField(name);
+    const [field, meta, helpers] = useField(name);
     return (
         <>
             <StyledTextInput
@@ -36,7 +36,7 @@ const FormikInputValue = ({ name, ...props }) => {
 }
 
 const validate = values => {
-    const errors = { }
+    const errors = {}
     if (!values.email) {
         errors.email = 'Email is required'
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9]+\.[A-Z]{2,4}$/i.test(values.email)) {
